@@ -8,6 +8,24 @@ Works with Claude Code, GitHub Copilot, Cursor, Codex, and any AI assistant that
 
 ---
 
+## Quick Start
+
+**Step 1 — Add to your project:**
+
+```bash
+curl -fsSL https://github.com/DarkoDamjanovic/sdd-starter/archive/main.tar.gz | tar -xz && mv sdd-starter-main specs
+```
+
+**Step 2 — Tell your AI:**
+
+```
+Read specs/WORKFLOW.md, then create a new spec for: [describe your feature in plain language]
+```
+
+That's it. Your AI knows what to do next.
+
+---
+
 ## What Is AI Spec-Driven Development?
 
 AI coding assistants are powerful but directionless. Ask one to "add a login feature" and it will — but it will make dozens of invisible decisions along the way: what the API looks like, how errors are handled, what the UI does, what gets tested. Those decisions may contradict each other, contradict your product vision, or simply not be what you had in mind.
