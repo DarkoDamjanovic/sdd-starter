@@ -10,7 +10,7 @@ Works with Claude Code, GitHub Copilot, Cursor, Codex, and any AI assistant that
 
 ## Quick Start
 
-**Step 1 — Add to your project:**
+**Step 1 — From your project's root folder, run:**
 
 ```bash
 curl -fsSL https://github.com/DarkoDamjanovic/sdd-starter/archive/main.tar.gz | tar -xz && mv sdd-starter-main specs
