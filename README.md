@@ -349,6 +349,15 @@ Add it as an acceptance criterion, then fix the code to satisfy it.
 
 In both cases, root cause notes go in `decisions.md` and any follow-up work goes in `todo.md`. No separate bug-tracking process is needed — the spec files are the record.
 
+**Found a bug in the SDD workflow itself?** The workflow is a spec — treat it the same way. Tell your AI what is wrong or confusing, and it will update `WORKFLOW.md`, the templates, and `AGENTS.md`/`CLAUDE.md` to fix it.
+
+```
+Something in WORKFLOW.md is unclear/wrong: [describe the problem].
+Fix it so that [describe the desired behavior].
+```
+
+The updated workflow is live in the next session.
+
 ---
 
 <br/>
