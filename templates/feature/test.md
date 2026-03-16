@@ -4,6 +4,14 @@ _`[auto]` items are verified by running the automated test suite. `[manual]` ite
 
 _AI checks off `[auto]` items when tests pass. A human checks off `[manual]` items. The feature moves to `done` only when all items are checked._
 
+## Acceptance Criteria Coverage
+
+_Each BDD criterion from `spec.md` must be covered by at least one test case below._
+
+| Criterion | Test Case |
+|:----------|:----------|
+| **Given** {{precondition}}, **When** {{action}}, **Then** {{expected outcome}} | {{test case name or ID}} |
+
 ## Test Cases
 
 - [ ] [auto] {{What is being tested}} (`{{TestFile}}`)

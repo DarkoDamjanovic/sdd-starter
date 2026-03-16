@@ -167,6 +167,7 @@ Tasks must be listed in strict prerequisite-first order. A task may only appear 
 Defines how the feature is verified. Written by AI after `spec.md` is approved — derived from the acceptance criteria, not the implementation plan. For foundation items, written alongside `tasks.md`.
 
 Contains:
+- Acceptance criteria coverage table — maps every BDD criterion from `spec.md` to one or more test cases
 - `[auto]` items — verified by running the automated test suite
 - `[manual]` items — verified by a human on a real device or build
 

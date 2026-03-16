@@ -274,7 +274,7 @@ updated: 2025-01-15
 
 That is enough for AI to write a full technical plan, a test suite, and a complete task checklist. You wrote three acceptance criteria. AI does the rest.
 
-Acceptance criteria use BDD format — **Given** / **When** / **Then** — so each one maps directly to a test case. No translation needed.
+Acceptance criteria use BDD format — **Given** / **When** / **Then**. When AI writes `test.md`, it starts with a coverage table that maps each criterion to one or more test cases. Every criterion must be covered before the feature can move to `done`.
 
 ---
 
