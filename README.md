@@ -43,6 +43,7 @@
 - [A Minimal Spec Example](#a-minimal-spec-example)
 - [AI Compatibility](#ai-compatibility)
 - [Adapting the Workflow](#adapting-the-workflow)
+- [Handling Bugs](#handling-bugs)
 - [Adding sdd-starter to an Existing Project](#adding-sdd-starter-to-an-existing-project)
 - [License](#license)
 
@@ -320,6 +321,33 @@ The fastest way to adapt it is to ask your AI directly:
 The AI updates `WORKFLOW.md`, the templates, and `AGENTS.md`/`CLAUDE.md` to reflect the change. The new process is live in the next session.
 
 **The workflow is itself a spec. Treat it like one.**
+
+---
+
+<br/>
+
+## Handling Bugs
+
+A bug is a gap between a spec and reality. Before fixing anything, identify which side of that gap the bug lives on.
+
+**The spec describes the correct behavior, and the code is wrong.** The spec does not need to change. Tell your AI to find the acceptance criterion that the bug violates and fix the code until that criterion passes.
+
+```
+Read specs/<feature>/spec.md and specs/<feature>/test.md.
+The following behavior is broken: [describe the bug].
+Identify which acceptance criterion this violates and fix it.
+Add a regression test to test.md.
+```
+
+**The spec does not cover this behavior at all.** The spec is incomplete. Update the spec first — add the missing acceptance criterion — then fix the code. The bug becomes a spec gap, and closing it is just normal SDD work.
+
+```
+Read specs/<feature>/spec.md.
+This case is not covered: [describe the bug].
+Add it as an acceptance criterion, then fix the code to satisfy it.
+```
+
+In both cases, root cause notes go in `decisions.md` and any follow-up work goes in `todo.md`. No separate bug-tracking process is needed — the spec files are the record.
 
 ---
 
