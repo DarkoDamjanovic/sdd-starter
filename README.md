@@ -206,9 +206,9 @@ Examples: `auth-infrastructure`, `design-system`, `ci-pipeline`, `database-schem
 SDD has three phases. Each requires your approval before the next begins.
 
 ```
-Spec ──▶ Plan ──▶ Implement ──▶ Test
-  ▲                               │
-  └──────────── next feature ─────┘
+Spec ──▶ Implement ──▶ Test
+  ▲                      │
+  └──── next feature ────┘
 ```
 
 ### Phase 1 — Spec
