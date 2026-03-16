@@ -8,6 +8,24 @@ Works with Claude Code, GitHub Copilot, Cursor, Codex, and any AI assistant that
 
 ---
 
+## Contents
+
+- [Quick Start](#quick-start)
+- [What Is AI Spec-Driven Development?](#what-is-ai-spec-driven-development)
+- [The Human Loop](#the-human-loop)
+- [Why This Beats Plain Prompting](#why-this-beats-plain-prompting)
+- [Why sdd-starter and Not Something Else](#why-sdd-starter-and-not-something-else)
+- [What's in This Repo](#whats-in-this-repo)
+- [Two Types of Specs](#two-types-of-specs)
+- [The Workflow](#the-workflow)
+- [A Minimal Spec Example](#a-minimal-spec-example)
+- [AI Compatibility](#ai-compatibility)
+- [Adapting the Workflow](#adapting-the-workflow)
+- [Adding sdd-starter to an Existing Project](#adding-sdd-starter-to-an-existing-project)
+- [License](#license)
+
+---
+
 ## Quick Start
 
 **Step 1 — From your project's root folder, run:**
