@@ -358,6 +358,8 @@ Fix it so that [describe the desired behavior].
 
 The updated workflow is live in the next session.
 
+PRs are welcome too — if you've improved your local workflow and think others would benefit, open a pull request.
+
 ---
 
 <br/>
