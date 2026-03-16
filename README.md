@@ -252,6 +252,60 @@ The AI updates `WORKFLOW.md`, the templates, and `AGENTS.md`/`CLAUDE.md` to refl
 
 ---
 
+## Adding sdd-starter to an Existing Project
+
+There is no single right way. Several strategies work depending on the size of the project and how much existing code you want to cover. Choose the one that fits.
+
+---
+
+**Strategy 1 — Forward only (recommended for large projects)**
+
+Don't touch existing code. From today, all new features and modifications go through SDD. Existing code is treated as legacy — it works, leave it alone.
+
+Tell your AI:
+```
+Read specs/PROJECT.md and fill it in based on the existing codebase. Then create a specs/INDEX.md entry for each major existing area, marked as `done`. From now on, all new work goes through WORKFLOW.md.
+```
+
+---
+
+**Strategy 2 — Touch it, spec it**
+
+No upfront backfill. Instead, the rule is: before you modify any part of the codebase, write a spec for it first. Specs accumulate naturally as work happens.
+
+Tell your AI:
+```
+Before changing anything in [area], write a spec for it first using WORKFLOW.md. Treat the existing behaviour as the baseline — spec what is there, then spec what we are changing.
+```
+
+---
+
+**Strategy 3 — Selective backfill**
+
+Identify the parts of the codebase that are most critical, most frequently changed, or hardest to understand. Backfill specs for those areas only — reverse-specced from the existing code.
+
+Tell your AI:
+```
+Read the code in [folder or area] and write a spec.md for it as if it were already implemented. Describe what it does, who uses it, and what the acceptance criteria would be. Mark it as `done`.
+```
+
+---
+
+**Strategy 4 — Full backfill**
+
+Spec everything. Only practical for small-to-medium projects. Gives you a complete picture and a clean starting point.
+
+Tell your AI:
+```
+Read the entire codebase and create a spec for every major feature and infrastructure item. Use WORKFLOW.md templates. Mark all existing items as `done` and build out INDEX.md from scratch.
+```
+
+---
+
+No strategy is wrong. The goal is that future work has a spec. How much of the past you document is up to you.
+
+---
+
 ## License
 
 This is free and unencumbered software released into the public domain. Do whatever you want with it — use it, copy it, modify it, sell it, don't credit it. No conditions.
