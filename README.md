@@ -1,6 +1,6 @@
 # sdd-starter
 
-**A spec-driven development workflow for AI coding assistants.**
+**An unopinionated spec-driven development workflow for AI coding assistants.**
 
 Drop this folder into any project and give your AI a structured, consistent way to build software — from idea to tested implementation. No scripts, no tooling, no branching strategy. Just a few files and a process.
 
