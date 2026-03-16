@@ -82,7 +82,7 @@ That's it. Your AI knows what to do next.
 
 ## What Is AI Spec-Driven Development?
 
-AI coding assistants are powerful but directionless. Ask one to "add a login feature" and it will — but it will make dozens of invisible decisions along the way: what the API looks like, how errors are handled, what the UI does, what gets tested. Those decisions may contradict each other, contradict your product vision, or simply not be what you had in mind.
+AI coding assistants are powerful but directionless. Ask one to "add a login feature" and it will — but it will make dozens of invisible decisions along the way: what the API looks like, how errors are handled, what the UI does, what gets tested, and whether to order a pizza. Those decisions may contradict each other, contradict your product vision, or simply not be what you had in mind.
 
 **Spec-Driven Development (SDD)** solves this by separating *what* from *how* from *do it*.
 
