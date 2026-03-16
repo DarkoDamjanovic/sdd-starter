@@ -114,16 +114,6 @@ foundation/
 
 ---
 
-## Add to Your Project
-
-```bash
-curl -fsSL https://github.com/DarkoDamjanovic/sdd-starter/archive/main.tar.gz | tar -xz && mv sdd-starter-main specs
-```
-
-This downloads the files directly into a `specs/` folder in your current directory. No Git history, no extra tools required. Then open `specs/PROJECT.md` and describe your project. Your AI assistant handles the rest.
-
----
-
 ## The Workflow
 
 SDD has three phases. Each requires your approval before the next begins.
