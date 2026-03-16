@@ -1,12 +1,34 @@
-# sdd-starter
+<p align="center">
+  <img src="banner.svg" alt="sdd-starter" width="800"/>
+</p>
 
-**An unopinionated spec-driven development workflow for AI coding assistants.**
+<p align="center">
+  <a href="https://unlicense.org"><img src="https://img.shields.io/badge/license-Unlicense-blue.svg" alt="License: Unlicense"/></a>
+  &nbsp;
+  <img src="https://img.shields.io/badge/no%20scripts-plain%20Markdown-brightgreen" alt="No scripts"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/works%20with-any%20AI%20assistant-blueviolet" alt="Works with any AI"/>
+</p>
 
-Drop this folder into any project and give your AI a structured, consistent way to build software — from idea to tested implementation. No scripts, no tooling, no branching strategy. Just a few files and a process.
+<br/>
 
-Works with Claude Code, GitHub Copilot, Cursor, Codex, and any AI assistant that reads project files.
+<p align="center"><strong>An unopinionated spec-driven development workflow for AI coding assistants.</strong></p>
+
+<p align="center">Drop this folder into any project and give your AI a structured, consistent way to build software — from idea to tested implementation. No scripts, no tooling, no branching strategy. Just a few files and a process.</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Claude-D97706?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/GitHub%20Copilot-000000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Copilot"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logoColor=white" alt="Cursor"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Codex-412991?style=for-the-badge&logo=openai&logoColor=white" alt="Codex"/>
+</p>
 
 ---
+
+<br/>
 
 ## Contents
 
@@ -25,6 +47,8 @@ Works with Claude Code, GitHub Copilot, Cursor, Codex, and any AI assistant that
 - [License](#license)
 
 ---
+
+<br/>
 
 ## Quick Start
 
@@ -50,6 +74,8 @@ That's it. Your AI knows what to do next.
 
 ---
 
+<br/>
+
 ## What Is AI Spec-Driven Development?
 
 AI coding assistants are powerful but directionless. Ask one to "add a login feature" and it will — but it will make dozens of invisible decisions along the way: what the API looks like, how errors are handled, what the UI does, what gets tested. Those decisions may contradict each other, contradict your product vision, or simply not be what you had in mind.
@@ -61,6 +87,8 @@ Before any code is written, there is a spec. The spec describes what the feature
 The result: AI that builds what you actually want, in a way you can follow, with a record of every decision made along the way.
 
 ---
+
+<br/>
 
 ## The Human Loop
 
@@ -86,6 +114,8 @@ The AI does the volume. You provide the direction, taste, and judgment. That div
 
 ---
 
+<br/>
+
 ## Why This Beats Plain Prompting
 
 | Without specs | With sdd-starter |
@@ -98,6 +128,8 @@ The AI does the volume. You provide the direction, taste, and judgment. That div
 | Changing your mind is expensive | Change the spec first — the rest follows |
 
 ---
+
+<br/>
 
 ## Why sdd-starter and Not Something Else
 
@@ -113,6 +145,8 @@ sdd-starter does none of that.
 The only thing sdd-starter installs is a folder.
 
 ---
+
+<br/>
 
 ## What's in This Repo
 
@@ -138,6 +172,8 @@ foundation/
 
 ---
 
+<br/>
+
 ## Two Types of Specs
 
 Every piece of work belongs to one of two categories.
@@ -160,9 +196,17 @@ Examples: `auth-infrastructure`, `design-system`, `ci-pipeline`, `database-schem
 
 ---
 
+<br/>
+
 ## The Workflow
 
 SDD has three phases. Each requires your approval before the next begins.
+
+```
+Spec ──▶ Plan ──▶ Implement ──▶ Test
+  ▲                               │
+  └──────────── next feature ─────┘
+```
 
 ### Phase 1 — Spec
 
@@ -199,6 +243,8 @@ Every feature and infrastructure item lives in `INDEX.md` with its current statu
 
 ---
 
+<br/>
+
 ## A Minimal Spec Example
 
 ```markdown
@@ -228,6 +274,8 @@ Acceptance criteria use BDD format — **Given** / **When** / **Then** — so ea
 
 ---
 
+<br/>
+
 ## AI Compatibility
 
 sdd-starter works with any AI coding assistant that reads project files. Two files handle automatic loading without any configuration:
@@ -250,6 +298,8 @@ Any capable model works. That said, this workflow gets the most out of models th
 
 ---
 
+<br/>
+
 ## Adapting the Workflow
 
 Nothing here is fixed.
@@ -269,6 +319,8 @@ The AI updates `WORKFLOW.md`, the templates, and `AGENTS.md`/`CLAUDE.md` to refl
 **The workflow is itself a spec. Treat it like one.**
 
 ---
+
+<br/>
 
 ## Adding sdd-starter to an Existing Project
 
@@ -323,6 +375,8 @@ Read the entire codebase and create a spec for every major feature and infrastru
 No strategy is wrong. The goal is that future work has a spec. How much of the past you document is up to you.
 
 ---
+
+<br/>
 
 ## License
 
