@@ -55,7 +55,10 @@
 **Step 1 — From your project's root folder, run:**
 
 ```bash
-curl -fsSL https://github.com/DarkoDamjanovic/sdd-starter/archive/main.tar.gz | tar -xz && mv sdd-starter-main specs
+curl -fsSL https://github.com/DarkoDamjanovic/sdd-starter/archive/main.tar.gz \
+  | tar -xz --exclude="sdd-starter-main/README.md" \
+             --exclude="sdd-starter-main/banner.svg" \
+  && mv sdd-starter-main specs
 ```
 
 **Step 2 — Tell your AI to fill in the project description:**
