@@ -16,7 +16,13 @@ Works with Claude Code, GitHub Copilot, Cursor, Codex, and any AI assistant that
 curl -fsSL https://github.com/DarkoDamjanovic/sdd-starter/archive/main.tar.gz | tar -xz && mv sdd-starter-main specs
 ```
 
-**Step 2 — Tell your AI:**
+**Step 2 — Tell your AI to fill in the project description:**
+
+```
+Read specs/PROJECT.md, then fill it in for this project: [describe your project, its users, and what problem it solves]
+```
+
+**Step 3 — Tell your AI to create your first spec:**
 
 ```
 Read specs/WORKFLOW.md, then create a new spec for: [describe your feature in plain language]
@@ -114,6 +120,28 @@ foundation/
 
 ---
 
+## Two Types of Specs
+
+Every piece of work belongs to one of two categories.
+
+### Feature specs
+
+A feature is something a user experiences. It is always written from the user's perspective — a user story, acceptance criteria, UI flows, and API contracts. The test plan is derived from the acceptance criteria. The name reflects what the user accomplishes, not what the code does.
+
+Examples: `user-registration`, `send-message`, `export-report`
+
+### Foundation specs
+
+A foundation item is infrastructure or platform work that has no direct user experience but enables features to be built. It has a technical goal, a list of deliverables, and an explicit list of which features depend on it. Foundation specs must reach `implemented` or `done` status before any dependent feature can move to `in-progress`.
+
+Examples: `auth-infrastructure`, `design-system`, `ci-pipeline`, `database-schema`
+
+**The rule is simple:** if a user can describe what they want to do with it, it is a feature. If only an engineer would care that it exists, it is foundation.
+
+**Don't want this separation?** Tell your AI: _"Remove the distinction between feature and foundation specs from the workflow. Treat everything as a single spec type."_
+
+---
+
 ## The Workflow
 
 SDD has three phases. Each requires your approval before the next begins.
@@ -143,9 +171,13 @@ SDD has three phases. Each requires your approval before the next begins.
 3. Any bugs found revert status to `in-progress`
 4. When everything passes — status becomes `done`
 
+**Don't want this three-phase structure?** Tell your AI: _"Simplify the workflow to a single phase: write a spec, then implement it. Remove the separate planning and testing phases."_
+
 ### What `INDEX.md` does
 
 Every feature and infrastructure item lives in `INDEX.md` with its current status. Your AI keeps it in sync. When you start a new session, it reads this file and knows exactly what is in progress, what is blocked, and what is next. You never need to explain the project state — it is already written down.
+
+**Don't like how `INDEX.md` works?** Tell your AI: _"Change INDEX.md to [describe what you want instead]."_
 
 ---
 
