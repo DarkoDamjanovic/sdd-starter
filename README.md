@@ -45,6 +45,7 @@
 - [Adapting the Workflow](#adapting-the-workflow)
 - [Handling Bugs](#handling-bugs)
 - [Adding sdd-starter to an Existing Project](#adding-sdd-starter-to-an-existing-project)
+- [The Goal of sdd-starter](#the-goal-of-sdd-starter)
 - [License](#license)
 
 ---
@@ -416,6 +417,24 @@ Read the entire codebase and create a spec for every major feature and infrastru
 ---
 
 No strategy is wrong. The goal is that future work has a spec. How much of the past you document is up to you.
+
+---
+
+<br/>
+
+## The Goal of sdd-starter
+
+This is meant to be the last SDD framework you use. Not because it is the best one — but because it should be the last one you need.
+
+Once you have experienced spec-driven development in action — once you have seen an AI read a spec, propose a plan, and build exactly what was described — you understand the pattern. And once you understand the pattern, you do not need someone else's framework anymore. You can create your own.
+
+The ideal outcome is this: after using sdd-starter on one or two projects, you open a new project and tell your AI:
+
+> "Let's create an SDD framework for this project."
+
+And it does. Tailored to your stack, your team, your preferences. No starter repo needed. No templates to copy. Just you, your AI, and a process you already understand.
+
+sdd-starter exists to teach the pattern, not to own it.
 
 ---
 
