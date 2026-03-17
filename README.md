@@ -82,37 +82,7 @@ That's it. Your AI knows what to do next.
 
 ## What Is AI Spec-Driven Development?
 
-AI coding assistants are powerful but directionless. Ask one to "add a login feature" and it will — but it will make dozens of invisible decisions along the way: what the API looks like, how errors are handled, what the UI does, what gets tested, and whether to order a pizza. Those decisions may contradict each other, contradict your product vision, or simply not be what you had in mind.
-
-<details>
-<summary>🍕 Wait, can it actually order a pizza?</summary>
-
-<br/>
-
-```markdown
----
-status: planned
-created: 2026-03-17
-updated: 2026-03-17
----
-
-# Order a Pizza
-
-## User Story
-
-> As a hungry developer, I want to order a pizza from my AI coding assistant,
-> so that I can stay fed without leaving my terminal.
-
-## Acceptance Criteria
-
-- [ ] **Given** a developer says "order a pizza", **When** the AI receives the request, **Then** it drafts a spec for it instead of actually ordering anything
-- [ ] **Given** a drafted pizza spec, **When** the developer reviews it, **Then** they realize they should just open a delivery app
-- [ ] **Given** a delivery app is open, **When** the developer returns to coding, **Then** the AI has mass-refactored everything while they were gone
-```
-
-No. But it *will* write a spec for it. And honestly, that's more useful.
-
-</details>
+AI coding assistants are powerful but directionless. Ask one to "add a login feature" and it will — but it will make dozens of invisible decisions along the way: what the API looks like, how errors are handled, what the UI does, what gets tested.
 
 **Spec-Driven Development (SDD)** solves this by separating *what* from *how* from *do it*.
 
