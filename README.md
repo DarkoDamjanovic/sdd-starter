@@ -45,6 +45,7 @@
 - [Adapting the Workflow](#adapting-the-workflow)
 - [Handling Bugs](#handling-bugs)
 - [Adding sdd-starter to an Existing Project](#adding-sdd-starter-to-an-existing-project)
+- [Similar Projects](#similar-projects)
 - [License](#license)
 
 ---
@@ -415,6 +416,18 @@ Read the entire codebase and create a spec for every major feature and infrastru
 ---
 
 No strategy is wrong. The goal is that future work has a spec. How much of the past you document is up to you.
+
+---
+
+<br/>
+
+## Similar Projects
+
+Two other spec-driven development projects worth knowing:
+
+**[spec-kit](https://github.com/github/spec-kit)** — A CLI toolkit that implements a six-step SDD workflow: constitution → specify → plan → tasks → implement. Like sdd-starter, specs are written and approved before any code is written. Unlike sdd-starter, it requires installing a CLI tool (`specify-cli`) and invokes steps via slash commands inside an AI session. Works with 20+ AI agents.
+
+**[Kiro](https://github.com/kirodotdev/Kiro)** — An agentic IDE (macOS/Windows/Linux) by Amazon where spec-driven development is a first-class feature. A prompt is turned into a structured spec and implementation plan before the agent writes any code. Kiro also adds hooks, steering files, and MCP integration. Heavier than sdd-starter — a full IDE rather than a folder of Markdown files.
 
 ---
 
