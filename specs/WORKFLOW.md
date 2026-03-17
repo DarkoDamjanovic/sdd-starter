@@ -27,7 +27,6 @@ specs/
     foundation/           ← Templates for platform/infrastructure work
   features/               ← One folder per user-facing feature
     <feature-name>/
-      research.md         ← THE EXPLORATION (optional — only when a spike is needed before spec)
       spec.md             ← THE WHAT
       plan.md             ← THE HOW
       tasks.md            ← THE WORK
@@ -36,7 +35,6 @@ specs/
       todo.md             ← THE FUTURE
   foundation/             ← One folder per infrastructure or platform item
     <foundation-name>/
-      research.md         ← optional
       spec.md
       plan.md
       tasks.md
@@ -110,12 +108,6 @@ Good examples:
 ---
 
 ## File Purposes
-
-### `research.md` — THE EXPLORATION (optional)
-
-Only created when not enough is known to write a meaningful `spec.md`. Captures the spike: what was investigated, what was found, and what was decided as a result.
-
-If `research.md` exists, it is read before writing `spec.md`. It is never required — most specs skip it.
 
 ### `spec.md` — THE WHAT
 
@@ -235,27 +227,25 @@ Status is also mirrored in `INDEX.md` for a project-wide overview. **AI must kee
 ### Phase 1: Spec (→ draft → planned)
 
 **For features:**
-1. If the problem space is unclear, AI writes `research.md` before anything else
-2. Product owner writes a short user story — 1–3 sentences, non-technical
-3. AI expands this into a full `spec.md`: acceptance criteria, UI specs, API contracts
-4. Product owner reviews and approves (or requests changes)
-5. AI writes `test.md` based on the acceptance criteria in the approved spec
-6. AI writes `plan.md` based on the approved spec
-7. Product owner reviews and approves `plan.md`
-8. AI writes `tasks.md`
-9. Product owner reviews and approves
-10. AI updates status to `planned`
-
-**For foundation:**
-1. If the problem space is unclear, AI writes `research.md` before anything else
-2. Engineer or product owner states the technical goal in 1–3 sentences
-3. AI expands this into a full `spec.md`: technical goal, dependents, deliverables, scope
-4. Product owner or tech lead reviews and approves
+1. Product owner writes a short user story — 1–3 sentences, non-technical
+2. AI expands this into a full `spec.md`: acceptance criteria, UI specs, API contracts
+3. Product owner reviews and approves (or requests changes)
+4. AI writes `test.md` based on the acceptance criteria in the approved spec
 5. AI writes `plan.md` based on the approved spec
-6. Product owner reviews and approves
-7. AI writes `tasks.md` and `test.md` based on the approved plan
+6. Product owner reviews and approves `plan.md`
+7. AI writes `tasks.md`
 8. Product owner reviews and approves
 9. AI updates status to `planned`
+
+**For foundation:**
+1. Engineer or product owner states the technical goal in 1–3 sentences
+2. AI expands this into a full `spec.md`: technical goal, dependents, deliverables, scope
+3. Product owner or tech lead reviews and approves
+4. AI writes `plan.md` based on the approved spec
+5. Product owner reviews and approves
+6. AI writes `tasks.md` and `test.md` based on the approved plan
+7. Product owner reviews and approves
+8. AI updates status to `planned`
 
 ### Phase 2: Implementation (→ in-progress → implemented)
 

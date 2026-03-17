@@ -165,8 +165,8 @@ specs/
   CLAUDE.md         ← Auto-loaded by Claude Code.
   AGENTS.md         ← Auto-loaded by GitHub Copilot and Codex.
   templates/
-    feature/        ← Templates for user-facing features (7 files)
-    foundation/     ← Templates for infrastructure and platform work (7 files)
+    feature/        ← Templates for user-facing features (6 files)
+    foundation/     ← Templates for infrastructure and platform work (6 files)
 ```
 
 When you start a project, you will also create:
