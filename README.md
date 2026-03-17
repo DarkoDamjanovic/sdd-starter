@@ -45,6 +45,7 @@
 - [Adapting the Workflow](#adapting-the-workflow)
 - [Handling Bugs](#handling-bugs)
 - [Adding sdd-starter to an Existing Project](#adding-sdd-starter-to-an-existing-project)
+- [The Goal of sdd-starter](#the-goal-of-sdd-starter)
 - [Similar Projects](#similar-projects)
 - [License](#license)
 
@@ -83,7 +84,7 @@ That's it. Your AI knows what to do next.
 
 ## What Is AI Spec-Driven Development?
 
-AI coding assistants are powerful but directionless. Ask one to "add a login feature" and it will — but it will make dozens of invisible decisions along the way: what the API looks like, how errors are handled, what the UI does, what gets tested. Those decisions may contradict each other, contradict your product vision, or simply not be what you had in mind.
+AI coding assistants are powerful but directionless. Ask one to "add a login feature" and it will — but it will make dozens of invisible decisions along the way: what the API looks like, how errors are handled, what the UI does, what gets tested, and whether to order a pizza. Those decisions may contradict each other, contradict your product vision, or simply not be what you had in mind.
 
 **Spec-Driven Development (SDD)** solves this by separating *what* from *how* from *do it*.
 
@@ -145,6 +146,7 @@ sdd-starter does none of that.
 - **No hidden scripts.** Everything is plain Markdown files. Open them in any editor.
 - **No branching required.** You do not need feature branches, PR workflows, or merge strategies. You just tell your AI which feature to work on next. It reads `INDEX.md`, understands the current state, and picks up exactly where things left off.
 - **No lock-in.** The workflow is text. Copy it, modify it, delete the parts you don't need.
+- **Zero footprint.** Everything lives inside a single `specs/` folder. Don't like it? Delete the folder and your project is exactly as it was before. Nothing else is touched.
 - **Works at any scale.** The same process fits a solo weekend project, a small team, a microservice, a CLI tool, or a large product.
 
 The only thing sdd-starter installs is a folder.
@@ -416,6 +418,24 @@ Read the entire codebase and create a spec for every major feature and infrastru
 ---
 
 No strategy is wrong. The goal is that future work has a spec. How much of the past you document is up to you.
+
+---
+
+<br/>
+
+## The Goal of sdd-starter
+
+This is meant to be the last SDD framework you use. Not because it is the best one — but because it should be the last one you need.
+
+Once you have experienced spec-driven development in action — once you have seen an AI read a spec, propose a plan, and build exactly what was described — you understand the pattern. And once you understand the pattern, you do not need someone else's framework anymore. You can create your own.
+
+The ideal outcome is this: after using sdd-starter on one or two projects, you open a new project and tell your AI:
+
+> "Let's create an SDD framework for this project."
+
+And it does. Tailored to your stack, your team, your preferences. No starter repo needed. No templates to copy. Just you, your AI, and a process you already understand.
+
+sdd-starter exists to teach the pattern, not to own it.
 
 ---
 
