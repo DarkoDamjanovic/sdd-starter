@@ -429,6 +429,8 @@ Two other spec-driven development projects worth knowing:
 
 **[Kiro](https://github.com/kirodotdev/Kiro)** — An agentic IDE (macOS/Windows/Linux) by Amazon where spec-driven development is a first-class feature. A prompt is turned into a structured spec and implementation plan before the agent writes any code. Kiro also adds hooks, steering files, and MCP integration. Heavier than sdd-starter — a full IDE rather than a folder of Markdown files.
 
+**sdd-starter** adds explicit workflow phases — Spec, Implement, and Test — each requiring your approval before the next begins. Features move through a tracked lifecycle from `draft` to `planned` to `implemented` to `done`, visible at a glance in `INDEX.md`. Neither spec-kit nor Kiro expose this kind of phase-gated progression as a first-class concept.
+
 ---
 
 <br/>
