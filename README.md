@@ -59,9 +59,9 @@
 
 ```bash
 curl -fsSL https://github.com/DarkoDamjanovic/sdd-starter/archive/main.tar.gz \
-  | tar -xz --exclude="sdd-starter-main/README.md" \
-             --exclude="sdd-starter-main/banner.svg" \
-  && mv sdd-starter-main specs
+  | tar -xz sdd-starter-main/specs \
+  && mv sdd-starter-main/specs specs \
+  && rmdir sdd-starter-main
 ```
 
 **Step 2 — Tell your AI to fill in the project description:**
@@ -84,7 +84,7 @@ That's it. Your AI knows what to do next.
 
 ## What Is AI Spec-Driven Development?
 
-AI coding assistants are powerful but directionless. Ask one to "add a login feature" and it will — but it will make dozens of invisible decisions along the way: what the API looks like, how errors are handled, what the UI does, what gets tested, and whether to order a pizza. Those decisions may contradict each other, contradict your product vision, or simply not be what you had in mind.
+AI coding assistants are powerful but directionless. Ask one to "add a login feature" and it will — but it will make dozens of invisible decisions along the way: what the API looks like, how errors are handled, what the UI does, and what gets tested. Those decisions may contradict each other, contradict your product vision, or simply not be what you had in mind.
 
 **Spec-Driven Development (SDD)** solves this by separating *what* from *how* from *do it*.
 
@@ -158,23 +158,25 @@ The only thing sdd-starter installs is a folder.
 ## What's in This Repo
 
 ```
-WORKFLOW.md       ← The rules. Read this first.
-PROJECT.md        ← Your project description and personas. Fill this in.
-INDEX.md          ← Live status dashboard of all features and foundation items.
-CLAUDE.md         ← Auto-loaded by Claude Code.
-AGENTS.md         ← Auto-loaded by GitHub Copilot and Codex.
-templates/
-  feature/        ← Templates for user-facing features (7 files)
-  foundation/     ← Templates for infrastructure and platform work (7 files)
+specs/
+  WORKFLOW.md       ← The rules. Read this first.
+  PROJECT.md        ← Your project description and personas. Fill this in.
+  INDEX.md          ← Live status dashboard of all features and foundation items.
+  CLAUDE.md         ← Auto-loaded by Claude Code.
+  AGENTS.md         ← Auto-loaded by GitHub Copilot and Codex.
+  templates/
+    feature/        ← Templates for user-facing features (7 files)
+    foundation/     ← Templates for infrastructure and platform work (7 files)
 ```
 
 When you start a project, you will also create:
 
 ```
-features/
-  <feature-name>/     ← One folder per feature
-foundation/
-  <item-name>/        ← One folder per infrastructure item
+specs/
+  features/
+    <feature-name>/     ← One folder per feature
+  foundation/
+    <item-name>/        ← One folder per infrastructure item
 ```
 
 ---
@@ -228,7 +230,7 @@ Spec ──▶ Implement ──▶ Test
 ### Phase 2 — Implementation
 
 1. AI works through the task list, checking off items as it goes
-2. After every task, it runs the test suite automatically
+2. After every task, it runs available automated tests
 3. Non-obvious choices go into `decisions.md`
 4. Anything deferred or discovered goes into `todo.md`
 5. When every task is checked off — status becomes `implemented`
@@ -291,7 +293,7 @@ sdd-starter works with any AI coding assistant that reads project files. Two fil
 Automatically loaded by **Claude Code**. Instructs it to read `WORKFLOW.md` and `INDEX.md` before making any change. Claude Code scans all directories in a project for `CLAUDE.md` files — no setup needed.
 
 ### `AGENTS.md`
-Automatically loaded by **GitHub Copilot** (agent mode) and **OpenAI Codex**. Same instruction, different filename — each tool has its own convention for picking up project rules.
+Automatically loaded by **GitHub Copilot** (agent mode) and **OpenAI Codex** (the 2025 coding agent — not the deprecated Codex completion API). Same instruction, different filename — each tool has its own convention for picking up project rules.
 
 Both files contain the same rule:
 
