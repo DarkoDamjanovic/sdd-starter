@@ -44,6 +44,7 @@
 - [AI Compatibility](#ai-compatibility)
 - [Adapting the Workflow](#adapting-the-workflow)
 - [Handling Bugs](#handling-bugs)
+- [Extending the Workflow](#extending-the-workflow)
 - [Adding sdd-starter to an Existing Project](#adding-sdd-starter-to-an-existing-project)
 - [The Goal of sdd-starter](#the-goal-of-sdd-starter)
 - [Similar Projects](#similar-projects)
@@ -364,6 +365,24 @@ Fix it so that [describe the desired behavior].
 The updated workflow is live in the next session.
 
 PRs are welcome too — if you've improved your local workflow and think others would benefit, open a pull request.
+
+---
+
+<br/>
+
+## Extending the Workflow
+
+Want to add features to the workflow itself? The fastest path is to ask your AI. The workflow is plain Markdown — your AI can read it, understand the structure, and add whatever you need.
+
+A few examples:
+
+**Trigger spec creation with a slash command.** Tell your AI: _"Create a slash command `/new-feature` that reads WORKFLOW.md and walks me through creating a new feature spec."_ Now starting a spec is a single keystroke instead of a copy-paste from templates.
+
+**Auto-update INDEX.md with a hook.** Tell your AI: _"Set up a hook that updates INDEX.md whenever a spec status changes."_
+
+**Add a risk assessment to specs.** Tell your AI: _"Add a risk section to the feature spec template that covers security implications, data privacy, and rollback strategy."_
+
+The pattern is always the same: describe what you want, and let the AI figure out where it fits. The workflow is a text file — anything you can describe, your AI can add.
 
 ---
 
