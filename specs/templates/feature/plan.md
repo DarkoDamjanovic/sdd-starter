@@ -10,6 +10,10 @@ _Written after `spec.md` is approved. Describes the technical approach._
 
 - `{{File, module, or service}}` — {{what changes and why}}
 
+## New Files
+
+- `{{full/path/to/NewFile.swift}}` — {{one-line purpose}}
+
 ## Technical Approach
 
 {{Step-by-step description of how the feature will be built. Be specific about data flow, module boundaries, and any non-obvious choices.}}
