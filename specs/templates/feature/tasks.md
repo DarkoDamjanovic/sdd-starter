@@ -1,3 +1,4 @@
+<!-- AI: Read specs/WORKFLOW.md before working with this file. -->
 # Tasks: {{Feature Name}}
 
 _Written after `plan.md` is approved. AI checks off items as work is completed._

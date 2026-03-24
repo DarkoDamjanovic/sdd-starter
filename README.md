@@ -163,8 +163,6 @@ specs/
   WORKFLOW.md       ← The rules. Read this first.
   PROJECT.md        ← Your project description and personas. Fill this in.
   INDEX.md          ← Live status dashboard of all features and foundation items.
-  CLAUDE.md         ← Auto-loaded by Claude Code.
-  AGENTS.md         ← Auto-loaded by GitHub Copilot and Codex.
   templates/
     feature/        ← Templates for user-facing features (6 files)
     foundation/     ← Templates for infrastructure and platform work (6 files)
@@ -288,23 +286,17 @@ Acceptance criteria use BDD format — **Given** / **When** / **Then**. When AI 
 
 ## AI Compatibility
 
-sdd-starter works with any AI coding assistant that reads project files. Two files handle automatic loading without any configuration:
+sdd-starter works with any AI coding assistant that reads project files. Every template file contains an embedded instruction:
 
-### `CLAUDE.md`
-Automatically loaded by **Claude Code**. Instructs it to read `WORKFLOW.md` and `INDEX.md` before making any change. Claude Code scans all directories in a project for `CLAUDE.md` files — no setup needed.
+```html
+<!-- AI: Read specs/WORKFLOW.md before working with this file. -->
+```
 
-### `AGENTS.md`
-Automatically loaded by **GitHub Copilot** (agent mode) and **OpenAI Codex** (the 2025 coding agent — not the deprecated Codex completion API). Same instruction, different filename — each tool has its own convention for picking up project rules.
-
-Both files contain the same rule:
-
-> Before any change, read `specs/WORKFLOW.md` and `specs/INDEX.md` to determine if the change requires a spec update first.
-
-**For Cursor:** add the contents of `WORKFLOW.md` to your `.cursorrules` file. The workflow is plain text — it works anywhere an AI reads instructions.
+This means any AI that opens a spec file is immediately directed to the workflow rules — no separate configuration files needed. The instruction travels with the spec, so it works regardless of which AI tool you use or how it discovers project files.
 
 ### Which AI to use
 
-Any capable model works. That said, this workflow gets the most out of models that reason well across long documents and maintain coherence across many files simultaneously. **Claude** (by Anthropic) is currently the strongest choice for this — it handles large specs, long task lists, and multi-file reasoning better than any other model available today. The `CLAUDE.md` file is not a coincidence.
+Any capable model works. That said, this workflow gets the most out of models that reason well across long documents and maintain coherence across many files simultaneously. **Claude** (by Anthropic) is currently the strongest choice for this — it handles large specs, long task lists, and multi-file reasoning better than any other model available today.
 
 ---
 
@@ -324,7 +316,7 @@ The fastest way to adapt it is to ask your AI directly:
 
 > "Add a `security.md` file to every feature spec."
 
-The AI updates `WORKFLOW.md`, the templates, and `AGENTS.md`/`CLAUDE.md` to reflect the change. The new process is live in the next session.
+The AI updates `WORKFLOW.md` and the templates to reflect the change. The new process is live in the next session.
 
 **The workflow is itself a spec. Treat it like one.**
 
@@ -355,7 +347,7 @@ Add it as an acceptance criterion, then fix the code to satisfy it.
 
 In both cases, root cause notes go in `decisions.md` and any follow-up work goes in `todo.md`. No separate bug-tracking process is needed — the spec files are the record.
 
-**Found a bug in the SDD workflow itself?** The workflow is a spec — treat it the same way. Tell your AI what is wrong or confusing, and it will update `WORKFLOW.md`, the templates, and `AGENTS.md`/`CLAUDE.md` to fix it.
+**Found a bug in the SDD workflow itself?** The workflow is a spec — treat it the same way. Tell your AI what is wrong or confusing, and it will update `WORKFLOW.md` and the templates to fix it.
 
 ```
 Something in WORKFLOW.md is unclear/wrong: [describe the problem].

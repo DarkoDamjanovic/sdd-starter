@@ -1,3 +1,4 @@
+<!-- AI: Read specs/WORKFLOW.md before working with this file. -->
 ---
 type: foundation
 status: draft

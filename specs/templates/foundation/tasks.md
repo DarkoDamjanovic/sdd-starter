@@ -1,3 +1,4 @@
+<!-- AI: Read specs/WORKFLOW.md before working with this file. -->
 # Tasks: {{Foundation Name}}
 
 _Written after `plan.md` is approved. Bite-sized implementation checklist. AI checks off items as work is completed._

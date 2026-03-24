@@ -1,3 +1,4 @@
+<!-- AI: Read specs/WORKFLOW.md before working with this file. -->
 # Decisions: {{Feature Name}}
 
 _Records why technical choices were made. Never delete entries — add new ones as decisions are made. This file helps future AI sessions and developers understand settled choices without re-debating them._

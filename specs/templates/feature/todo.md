@@ -1,3 +1,4 @@
+<!-- AI: Read specs/WORKFLOW.md before working with this file. -->
 # Todo: {{Feature Name}}
 
 _Known bugs, deferred improvements, and open questions. Updated throughout the feature lifecycle._
