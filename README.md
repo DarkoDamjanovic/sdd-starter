@@ -290,6 +290,12 @@ sdd-starter works with any AI coding assistant that reads project files.
 
 Any capable model works. That said, this workflow gets the most out of models that reason well across long documents and maintain coherence across many files simultaneously. **Claude** (by Anthropic) is currently the strongest choice for this — it handles large specs, long task lists, and multi-file reasoning better than any other model available today.
 
+**Configuring your AI.** To make your AI automatically follow the workflow whenever it touches spec files, ask it:
+
+> "Make sure you always read `specs/WORKFLOW.md` and `specs/INDEX.md` before working on any file inside the `specs/` folder. Configure this so it happens automatically in every session."
+
+Your AI knows where its own configuration lives — `CLAUDE.md`, `.github/copilot-instructions.md`, `.cursorrules`, or whatever your tool uses — and will set it up for you.
+
 ---
 
 <br/>
