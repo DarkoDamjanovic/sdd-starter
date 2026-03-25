@@ -1,4 +1,3 @@
-<!-- AI: Read specs/WORKFLOW.md before working with this file. -->
 # Todo: {{Foundation Name}}
 
 _Known bugs, deferred improvements, and open questions. Updated throughout the lifecycle._

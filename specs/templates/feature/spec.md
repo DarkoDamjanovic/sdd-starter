@@ -1,4 +1,3 @@
-<!-- AI: Read specs/WORKFLOW.md before working with this file. -->
 ---
 status: draft
 created: {{YYYY-MM-DD}}

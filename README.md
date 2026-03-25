@@ -286,15 +286,7 @@ Acceptance criteria use BDD format — **Given** / **When** / **Then**. When AI 
 
 ## AI Compatibility
 
-sdd-starter works with any AI coding assistant that reads project files. Every template file contains an embedded instruction:
-
-```html
-<!-- AI: Read specs/WORKFLOW.md before working with this file. -->
-```
-
-This means any AI that opens a spec file is immediately directed to the workflow rules — no separate configuration files needed. The instruction travels with the spec, so it works regardless of which AI tool you use or how it discovers project files.
-
-### Which AI to use
+sdd-starter works with any AI coding assistant that reads project files.
 
 Any capable model works. That said, this workflow gets the most out of models that reason well across long documents and maintain coherence across many files simultaneously. **Claude** (by Anthropic) is currently the strongest choice for this — it handles large specs, long task lists, and multi-file reasoning better than any other model available today.
 

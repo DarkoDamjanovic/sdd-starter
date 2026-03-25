@@ -1,4 +1,3 @@
-<!-- AI: Read specs/WORKFLOW.md before working with this file. -->
 # Tests: {{Feature Name}}
 
 _`[auto]` items are verified by running the automated test suite. `[manual]` items require human verification in a real environment._
