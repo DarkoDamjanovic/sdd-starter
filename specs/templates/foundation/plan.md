@@ -1,4 +1,3 @@
-<!-- AI: Read specs/WORKFLOW.md before working with this file. -->
 # Plan: {{Foundation Name}}
 
 _Written after `spec.md` is approved. Describes the technical approach._
