@@ -27,7 +27,7 @@ specs/
     foundation/           ← Templates for platform/infrastructure work
   features/               ← One folder per user-facing feature
     <feature-name>/
-      spec.md             ← THE WHAT
+      requirements.md     ← THE WHAT
       plan.md             ← THE HOW
       tasks.md            ← THE WORK
       test.md             ← THE VERIFICATION
@@ -35,7 +35,7 @@ specs/
       todo.md             ← THE FUTURE
   foundation/             ← One folder per infrastructure or platform item
     <foundation-name>/
-      spec.md
+      requirements.md
       plan.md
       tasks.md
       test.md
@@ -78,7 +78,7 @@ Describe what a **user** experiences. Always written from the user's perspective
 ### Foundation
 Describe **infrastructure or platform work** that enables features but is not directly experienced by end users. Examples: a design system, a networking layer, a data catalog, a CI pipeline.
 
-Foundation items use a different `spec.md` template — instead of a User Story, they have a Technical Goal and a list of Dependents (which features rely on them).
+Foundation items use a different `requirements.md` template — instead of a User Story, they have a Technical Goal and a list of Dependents (which features rely on them).
 
 Both types follow the same workflow and status lifecycle.
 
@@ -109,7 +109,7 @@ Good examples:
 
 ## File Purposes
 
-### `spec.md` — THE WHAT
+### `requirements.md` — THE WHAT
 
 **For features:** Describes what the user experiences. Written first, owned by the product owner. Non-technical stakeholders must be able to read and understand it.
 
@@ -117,10 +117,11 @@ Contains:
 - Status and type (frontmatter)
 - User story — 1–3 sentences, non-technical, PO-level
 - Personas involved
-- Acceptance criteria — written in BDD format: **Given** / **When** / **Then**
 - UI and visual design specifications (optional for non-UI features)
 - Interfaces and contracts (REST endpoints, CLI commands, message schemas, etc.)
+- Acceptance criteria — written in BDD format: **Given** / **When** / **Then**
 - Constraints and edge cases
+- Open questions
 
 **For foundation:** Describes the technical goal, which features depend on it, and what will exist when it is done.
 
@@ -130,10 +131,12 @@ Contains:
 - Dependents — which features or foundation items rely on this
 - Deliverables — concrete artifacts that will exist when done
 - Scope and constraints
+- Acceptance criteria — written in BDD format: **Given** / **When** / **Then**
+- Open questions
 
 ### `plan.md` — THE HOW
 
-Describes how the feature will be built technically. Written by AI after `spec.md` is approved.
+Describes how the feature will be built technically. Written by AI alongside or after `requirements.md` — both may be drafted in a single step and reviewed together.
 
 Contains:
 - Technical approach
@@ -157,10 +160,10 @@ Tasks must be listed in strict prerequisite-first order. A task may only appear 
 
 ### `test.md` — THE VERIFICATION
 
-Defines how the feature is verified. Written by AI after `spec.md` is approved — derived from the acceptance criteria, not the implementation plan. For foundation items, written alongside `tasks.md`.
+Defines how the feature is verified. Written by AI after `requirements.md` is approved — derived from the acceptance criteria, not the implementation plan. For foundation items, written alongside `tasks.md`.
 
 Contains:
-- Acceptance criteria coverage table — maps every BDD criterion from `spec.md` to one or more test cases
+- Acceptance criteria coverage table — maps every BDD criterion from `requirements.md` to one or more test cases
 - `[auto]` items — verified by running the automated test suite
 - `[manual]` items — verified by a human on a real device or build
 
@@ -200,7 +203,7 @@ Contains:
 
 ## Status Lifecycle
 
-Every feature has a `status` field in the frontmatter of its `spec.md`. AI always keeps this up to date.
+Every feature has a `status` field in the frontmatter of its `requirements.md`. AI always keeps this up to date.
 
 ```
 draft → planned → in-progress → implemented → done
@@ -210,7 +213,7 @@ draft → planned → in-progress → implemented → done
 
 | Status        | Meaning                                                                              |
 |:--------------|:-------------------------------------------------------------------------------------|
-| `draft`       | `spec.md` is being written, not yet complete or approved                             |
+| `draft`       | `requirements.md` and `plan.md` are being drafted or reviewed — phase 1 not yet complete    |
 | `planned`     | `plan.md` and `tasks.md` are complete and approved                                   |
 | `in-progress` | Implementation is underway                                                           |
 | `blocked`     | Cannot proceed — a `requires` dependency is not yet `implemented` or `done`          |
@@ -229,24 +232,20 @@ Status is also mirrored in `INDEX.md` for a project-wide overview. **AI must kee
 
 **For features:**
 1. Product owner writes a short user story — 1–3 sentences, non-technical
-2. AI expands this into a full `spec.md`: acceptance criteria, UI specs, API contracts
-3. Product owner reviews and approves (or requests changes)
-4. AI writes `test.md` based on the acceptance criteria in the approved spec
-5. AI writes `plan.md` based on the approved spec
-6. Product owner reviews and approves `plan.md`
-7. AI writes `tasks.md`
-8. Product owner reviews and approves
-9. AI updates status to `planned`
+2. AI writes `requirements.md` and `plan.md` — these may be drafted together in a single step or sequentially; either way, both are reviewed before proceeding
+3. Product owner reviews and approves both (or requests changes)
+4. AI writes `test.md` based on the acceptance criteria
+5. AI writes `tasks.md`
+6. Product owner reviews and approves
+7. AI updates status to `planned`
 
 **For foundation:**
 1. Engineer or product owner states the technical goal in 1–3 sentences
-2. AI expands this into a full `spec.md`: technical goal, dependents, deliverables, scope
-3. Product owner or tech lead reviews and approves
-4. AI writes `plan.md` based on the approved spec
+2. AI writes `requirements.md` and `plan.md` — these may be drafted together in a single step or sequentially; either way, both are reviewed before proceeding
+3. Product owner or tech lead reviews and approves both
+4. AI writes `tasks.md` and `test.md`
 5. Product owner reviews and approves
-6. AI writes `tasks.md` and `test.md` based on the approved plan
-7. Product owner reviews and approves
-8. AI updates status to `planned`
+6. AI updates status to `planned`
 
 ### Phase 2: Implementation (→ in-progress → implemented)
 
@@ -271,7 +270,7 @@ Status is also mirrored in `INDEX.md` for a project-wide overview. **AI must kee
 
 When the spec changes after implementation has started:
 
-1. Update `spec.md` first — always
+1. Update `requirements.md` first — always
 2. Re-evaluate `plan.md` — update if the change affects the technical approach
 3. Re-evaluate `tasks.md` — add, remove, or update tasks accordingly
 4. Re-evaluate `test.md` — add, remove, or update test cases accordingly
@@ -282,7 +281,7 @@ When the spec changes after implementation has started:
 
 If code is changed without going through the spec process:
 
-1. Update `spec.md` to reflect the new reality — immediately
+1. Update `requirements.md` to reflect the new reality — immediately
 2. Update `plan.md` and `tasks.md` to match
 3. The spec must always describe the current state of the product
 
@@ -295,7 +294,7 @@ When working in this project, AI must:
 1. **Read `specs/WORKFLOW.md` and `specs/INDEX.md`** at the start of any spec-related task
 2. **Read `specs/PROJECT.md`** to understand the project context and personas before writing any spec or plan
 3. **Never implement** without an approved spec and plan
-4. **Keep status current** — update `spec.md` frontmatter and `INDEX.md` whenever status changes
+4. **Keep status current** — update `requirements.md` frontmatter and `INDEX.md` whenever status changes
 5. **Check off tasks** in `tasks.md` as implementation progresses
 6. **Parallelize when beneficial** — when independent tasks with no ordering constraints are ready at the same time, dispatch them to parallel subagents. Use judgment; not all tasks in the same phase are independent.
 7. **Verify dependency order before finalising `tasks.md`** — walk the full task list and confirm every task's prerequisites appear above it. Explicitly check for: infrastructure tasks (dependency updates, DI registrations, migrations), and tasks whose output is the input of a later task. Add any missing prerequisite tasks before proceeding.

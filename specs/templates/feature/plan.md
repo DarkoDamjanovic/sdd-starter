@@ -1,6 +1,6 @@
 # Plan: {{Feature Name}}
 
-_Written after `spec.md` is approved. Describes the technical approach._
+_Written alongside or after `requirements.md`. Describes the technical approach._
 
 ## Overview
 

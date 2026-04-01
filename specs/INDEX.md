@@ -29,7 +29,7 @@ _Nothing in progress yet._
 
 | Status          | Meaning                                                                     |
 |:----------------|:----------------------------------------------------------------------------|
-| `draft`         | `spec.md` is being written, not yet complete or approved                    |
+| `draft`         | `requirements.md` and `plan.md` are being drafted or reviewed — phase 1 not yet complete    |
 | `planned`       | `plan.md` and `tasks.md` are complete and approved                          |
 | `in-progress`   | Implementation is underway                                                  |
 | `blocked`       | Cannot proceed — a `requires` dependency is not yet `implemented` or `done` |
@@ -46,4 +46,4 @@ _No specs for these items yet. Reminder only._
 
 ---
 
-> AI: Keep all tables and the Next Up section up to date whenever a status changes. Must always match the frontmatter in each item's `spec.md`. Sort order for both tables: `in-progress` → `implemented` → `planned` → `draft` → `done`. Re-sort whenever a status changes. Also keep the progress graph at the top in sync: Features bar = in-progress count / total features; Foundation bar = (done + implemented) count / total foundation items. Each bar is 40 blocks using `█` (filled) and `░` (empty), rounded to nearest block.
+> AI: Keep all tables and the Next Up section up to date whenever a status changes. Must always match the frontmatter in each item's `requirements.md`. Sort order for both tables: `in-progress` → `implemented` → `planned` → `draft` → `done`. Re-sort whenever a status changes. Also keep the progress graph at the top in sync: Features bar = in-progress count / total features; Foundation bar = (done + implemented) count / total foundation items. Each bar is 40 blocks using `█` (filled) and `░` (empty), rounded to nearest block.

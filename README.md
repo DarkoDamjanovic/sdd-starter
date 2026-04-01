@@ -219,12 +219,10 @@ Spec ──▶ Implement ──▶ Test
 ### Phase 1 — Spec
 
 1. You describe the feature in plain language — 1–3 sentences
-2. AI expands it into a full `spec.md`: user story, acceptance criteria, UI description, API contracts
-3. You review and approve (or steer)
-4. AI writes `test.md` from the acceptance criteria, and `plan.md` with the technical approach
-5. You review and approve both
-6. AI writes `tasks.md` — a checklist of bite-sized implementation steps, in dependency order
-7. You review and approve — status becomes `planned`
+2. AI writes `requirements.md` and `plan.md` — together in one step or sequentially, your call
+3. You review and approve both (or steer)
+4. AI writes `test.md` from the acceptance criteria and `tasks.md` — a checklist of bite-sized implementation steps, in dependency order
+5. You review and approve — status becomes `planned`
 
 ### Phase 2 — Implementation
 
@@ -329,7 +327,7 @@ A bug is a gap between a spec and reality. Before fixing anything, identify whic
 **The spec describes the correct behavior, and the code is wrong.** The spec does not need to change. Tell your AI to find the acceptance criterion that the bug violates and fix the code until that criterion passes.
 
 ```
-Read specs/<feature>/spec.md and specs/<feature>/test.md.
+Read specs/<feature>/requirements.md and specs/<feature>/test.md.
 The following behavior is broken: [describe the bug].
 Identify which acceptance criterion this violates and fix it.
 Add a regression test to test.md.
@@ -338,7 +336,7 @@ Add a regression test to test.md.
 **The spec does not cover this behavior at all.** The spec is incomplete. Update the spec first — add the missing acceptance criterion — then fix the code. The bug becomes a spec gap, and closing it is just normal SDD work.
 
 ```
-Read specs/<feature>/spec.md.
+Read specs/<feature>/requirements.md.
 This case is not covered: [describe the bug].
 Add it as an acceptance criterion, then fix the code to satisfy it.
 ```
@@ -412,7 +410,7 @@ Identify the parts of the codebase that are most critical, most frequently chang
 
 Tell your AI:
 ```
-Read the code in [folder or area] and write a spec.md for it as if it were already implemented. Describe what it does, who uses it, and what the acceptance criteria would be. Mark it as `done`.
+Read the code in [folder or area] and write a requirements.md for it as if it were already implemented. Describe what it does, who uses it, and what the acceptance criteria would be. Mark it as `done`.
 ```
 
 ---

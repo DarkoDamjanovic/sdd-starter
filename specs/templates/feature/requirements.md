@@ -14,11 +14,6 @@ updated: {{YYYY-MM-DD}}
 
 _1–3 sentences. Non-technical. Immediately understandable by a non-developer._
 
-## Acceptance Criteria
-
-- [ ] **Given** {{precondition}}, **When** {{action}}, **Then** {{expected outcome}}
-- [ ] **Given** {{precondition}}, **When** {{action}}, **Then** {{expected outcome}}
-
 ## Personas
 
 - **{{Persona}}** — {{brief description of their role in this feature}}
@@ -60,6 +55,15 @@ _Define the interfaces or data contracts this feature introduces or depends on. 
 
 **Error ({{status}}):** {{description}}
 
+## Acceptance Criteria
+
+- [ ] **Given** {{precondition}}, **When** {{action}}, **Then** {{expected outcome}}
+- [ ] **Given** {{precondition}}, **When** {{action}}, **Then** {{expected outcome}}
+
 ## Constraints & Edge Cases
 
 - {{Edge case or constraint}}
+
+## Open Questions
+
+- {{Question that must be resolved before or during planning}}

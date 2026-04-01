@@ -35,6 +35,10 @@ _Which features or other foundation items rely on this being complete?_
 
 - {{Technical constraint that must be respected}}
 
+## Acceptance Criteria
+
+- [ ] **Given** {{precondition}}, **When** {{condition or action}}, **Then** {{expected technical state or behavior}}
+
 ## Open Questions
 
 - {{Question that must be resolved before or during planning}}

@@ -6,7 +6,7 @@ _AI checks off `[auto]` items when tests pass. A human checks off `[manual]` ite
 
 ## Acceptance Criteria Coverage
 
-_Each BDD criterion from `spec.md` must be covered by at least one test case below._
+_Each BDD criterion from `requirements.md` must be covered by at least one test case below._
 
 | Criterion | Test Case |
 |:----------|:----------|
