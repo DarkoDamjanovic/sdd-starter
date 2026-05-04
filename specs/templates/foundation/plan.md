@@ -8,15 +8,15 @@ _Written alongside or after `requirements.md`. Describes the technical approach.
 
 ## Components Affected
 
-- `{{File, module, or package}}` — {{what changes and why}}
+- `{{File, module, or component}}` — {{what changes and why}}
 
 ## New Files
 
-- `{{full/path/to/NewFile.swift}}` — {{one-line purpose}}
+- `{{full/path/to/NewFile}}` — {{one-line purpose}}
 
 ## Technical Approach
 
-{{Step-by-step description of how this will be built.}}
+{{Step-by-step description of how this will be built. Be specific about data flow, module boundaries, and any non-obvious choices.}}
 
 ## Dependencies on Other Foundation Items
 

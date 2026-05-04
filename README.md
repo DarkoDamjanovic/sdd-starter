@@ -269,9 +269,9 @@ updated: 2025-01-15
 
 ## Acceptance Criteria
 
-- [ ] **Given** a registered user, **When** they submit valid credentials, **Then** they are redirected to the dashboard
-- [ ] **Given** a login attempt, **When** the credentials are invalid, **Then** a clear error message is shown
-- [ ] **Given** a successful login, **When** the app is restarted, **Then** the session is still active
+- **Given** a registered user, **When** they submit valid credentials, **Then** they are redirected to the dashboard
+- **Given** a login attempt, **When** the credentials are invalid, **Then** a clear error message is shown
+- **Given** a successful login, **When** the app is restarted, **Then** the session is still active
 ```
 
 That is enough for AI to write a full technical plan, a test suite, and a complete task checklist. You wrote three acceptance criteria. AI does the rest.

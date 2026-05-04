@@ -37,7 +37,7 @@ _Which features or other foundation items rely on this being complete?_
 
 ## Acceptance Criteria
 
-- [ ] **Given** {{precondition}}, **When** {{condition or action}}, **Then** {{expected technical state or behavior}}
+- **Given** {{precondition}}, **When** {{condition or action}}, **Then** {{expected technical state or behavior}}
 
 ## Open Questions
 

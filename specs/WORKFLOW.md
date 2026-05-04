@@ -111,7 +111,7 @@ Good examples:
 
 ### `requirements.md` — THE WHAT
 
-**For features:** Describes what the user experiences. Written first, owned by the product owner. Non-technical stakeholders must be able to read and understand it.
+**For features:** Describes what the user experiences, written from the perspective of a business analyst. Contains **no technical implementation details** — only the *what*, never the *how*. Interfaces and contracts may be specified at the boundary (e.g. endpoint shapes, message schemas) since they define behaviour, but how those interfaces are built belongs in `plan.md`. Written first, owned by the product owner. Non-technical stakeholders must be able to read and understand it.
 
 Contains:
 - Status and type (frontmatter)
@@ -123,7 +123,7 @@ Contains:
 - Constraints and edge cases
 - Open questions
 
-**For foundation:** Describes the technical goal, which features depend on it, and what will exist when it is done.
+**For foundation:** Describes the technical goal, which features depend on it, and what will exist when it is done. Like the feature variant, it captures the *what* — implementation details belong in `plan.md`.
 
 Contains:
 - Status and type (frontmatter)
@@ -136,7 +136,7 @@ Contains:
 
 ### `plan.md` — THE HOW
 
-Describes how the feature will be built technically. Written by AI alongside or after `requirements.md` — both may be drafted in a single step and reviewed together.
+Describes how the feature will be built, written from the perspective of a developer. Translates the *what* from `requirements.md` into the *how* — architecture, data flow, module boundaries, and concrete file changes. Written by AI alongside or after `requirements.md` — both may be drafted in a single step and reviewed together.
 
 Contains:
 - Technical approach

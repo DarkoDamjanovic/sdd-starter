@@ -1,8 +1,9 @@
 ---
+type: feature
 status: draft
 created: {{YYYY-MM-DD}}
 updated: {{YYYY-MM-DD}}
-# requires:
+# requires:         ← omit entirely when there are no prerequisites
 #   - {{spec-folder-name}}
 ---
 
@@ -57,8 +58,8 @@ _Define the interfaces or data contracts this feature introduces or depends on. 
 
 ## Acceptance Criteria
 
-- [ ] **Given** {{precondition}}, **When** {{action}}, **Then** {{expected outcome}}
-- [ ] **Given** {{precondition}}, **When** {{action}}, **Then** {{expected outcome}}
+- **Given** {{precondition}}, **When** {{action}}, **Then** {{expected outcome}}
+- **Given** {{precondition}}, **When** {{action}}, **Then** {{expected outcome}}
 
 ## Constraints & Edge Cases
 
